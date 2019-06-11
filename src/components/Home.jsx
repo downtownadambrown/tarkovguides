@@ -11,9 +11,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
 
 class Home extends Component { // eslint-disable-next-line
     constructor(props){
@@ -26,7 +24,7 @@ class Home extends Component { // eslint-disable-next-line
         return (
             <div className="Home">
                 <CssBaseline />
-                <AppBar position="relative">
+                <AppBar position="relative" classes="primary">
                     <Toolbar>
                         <Typography variant="h6" color="inherit" noWrap>
                             Tarkov Guides
