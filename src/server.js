@@ -19,7 +19,7 @@ require('./routes/routes.js')(app);
 // Syncs our database first
 //db.sequelize.sync().then(function(){
 
-    // Starts our server on the predefined PORT
+// Starts our server on the predefined PORT
 app.listen(PORT, function(){
     console.log(`App is now listening on PORT ${PORT}`);
 });
