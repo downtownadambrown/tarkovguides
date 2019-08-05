@@ -8,7 +8,7 @@ import green from '@material-ui/core/colors/green';
 
 let theme = createMuiTheme({
     palette: {
-        primary: indigo,
+        primary: pink,
         secondary: pink,
         error: red,
         // Used by `getContrastText()` to maximize the contrast between the background and
