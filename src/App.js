@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './css/App.css';
 
-import Sample from '../src/components/Sample';
 import Login from '../src/components/Login.jsx';
 import MapsApp from '../src/components/MapsApp.jsx';
 import ModdingApp from '../src/components/ModdingApp';
@@ -11,17 +10,8 @@ import Home from '../src/components/Home';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import MainAppBar from "./components/MainAppBar";
 import Footer from "./components/Footer";
-import {makeStyles} from "@material-ui/core";
-
-const useStyles = makeStyles(theme => ({
-    content: {
-        flex: "1 0 auto",
-        marginBottom: 10
-    },
-}));
 
 function App() {
-    const classes = useStyles();
 
     return (
         <div id="appRouter">
