@@ -44,7 +44,6 @@ export default function MapsApp() {
                 </Container>
             </div>
             <Container maxWidth="md">
-                {/* End hero unit */}
                 <Grid container spacing={4}>
                     {mapList.map((map, index) => (
                         <Grid item key={index} xs={12} sm={6} md={4}>

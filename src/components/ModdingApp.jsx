@@ -26,7 +26,6 @@ export default function ModdingApp() {
                 </Container>
             </div>
             <Container maxWidth="md">
-                {/* End hero unit */}
                 <Grid container spacing={4}>
 
                 </Grid>
