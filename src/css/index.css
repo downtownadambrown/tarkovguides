@@ -6,6 +6,10 @@ html, body {
   height: 100%;
 }
 
+#appRouter {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -21,4 +25,31 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.appRoot {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.appContent {
+  flex: 1 0 auto;
+  margin-bottom: 10px;
+}
+
+.appFooter {
+  display: flex;
+  margin-top: auto;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #800000, #4d0000);
+}
+
+.appBar {
+  background: linear-gradient(180deg, #800000, #4d0000);
+}
+
+.appBarLink {
+  text-transform: uppercase;
 }
