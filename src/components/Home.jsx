@@ -31,7 +31,6 @@ const useStyles = makeStyles(theme => ({
         marginTop: "auto",
         flexShrink: 0,
         background: 'linear-gradient(180deg, #800000, #4d0000)',
-        marginTop: theme.spacing(2),
     },
     appBar: {
         background: 'linear-gradient(180deg, #800000, #4d0000)'
