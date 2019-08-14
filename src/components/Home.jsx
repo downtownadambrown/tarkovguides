@@ -14,18 +14,24 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import indigo from '@material-ui/core/colors/indigo';
 
-
 const useStyles = makeStyles(theme => ({
     root: {
-        flexGrow: 1,
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        flexGrow: 1,
+        height: "100%",
     },
-    loginButton: {
-        margin: theme.spacing(2),
+    title: {
+        marginRight: theme.spacing(6),
     },
-    menuButton: {
-        margin: theme.spacing(2),
+    content: {
+        flex: "1 0 auto",
+    },
+    footer: {
+        marginTop: "auto",
+        flexShrink: 0,
+        background: 'linear-gradient(180deg, #800000, #4d0000)',
+        marginTop: theme.spacing(2),
     },
     appBar: {
         background: 'linear-gradient(180deg, #800000, #4d0000)'
@@ -33,25 +39,18 @@ const useStyles = makeStyles(theme => ({
     appBarLink: {
         textTransform: "uppercase",
     },
+    loginButton: {
+        margin: theme.spacing(2),
+    },
+    menuButton: {
+        margin: theme.spacing(2),
+    },
     hero: {
         margin: theme.spacing(2),
     },
     grow: {
         flexGrow: 1,
     },
-    title: {
-        marginRight: theme.spacing(6),
-    },
-    footer: {
-        background: 'linear-gradient(180deg, #800000, #4d0000)',
-        marginTop: theme.spacing(2),
-        flexShrink: 0,
-    },
-    content: {
-        display: "flex",
-        flex: "1 0 auto",
-        flexGrow: 1,
-    }
 }));
 
 export default function Home() { // eslint-disable-next-line
@@ -60,72 +59,74 @@ export default function Home() { // eslint-disable-next-line
 
         return (
             <div className={classes.root}>
-                <CssBaseline />
-                <MainAppBar className={classes}/>
-                <main>
-                    {/* Hero unit */}
-                    <div className={classes.hero}>
-                        <Container maxWidth="sm">
-                            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                                Tarkov Guides
-                            </Typography>
-                            <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                                If Escaping from Tarkov were easy, we wouldn't exist.
-                            </Typography>
-                            <div>
-                                <Grid container spacing={2} justify="center">
-                                    <Grid item>
-                                        <Button variant="contained" color="primary">
-                                            Check out New Guides!
-                                        </Button>
+                <div className={classes.content}>
+                    <CssBaseline />
+                    <MainAppBar className={classes}/>
+                    <main>
+                        {/* Hero unit */}
+                        <div className={classes.hero}>
+                            <Container maxWidth="sm">
+                                <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+                                    Tarkov Guides
+                                </Typography>
+                                <Typography variant="h6" align="center" color="textSecondary" paragraph>
+                                    If Escaping from Tarkov were easy, we wouldn't exist.
+                                </Typography>
+                                <div>
+                                    <Grid container spacing={2} justify="center">
+                                        <Grid item>
+                                            <Button variant="contained" color="primary">
+                                                Check out New Guides!
+                                            </Button>
+                                        </Grid>
+                                        <Grid item>
+                                            <Button variant="outlined" color="secondary">
+                                                SomethingSomething
+                                            </Button>
+                                        </Grid>
                                     </Grid>
-                                    <Grid item>
-                                        <Button variant="outlined" color="secondary">
-                                            SomethingSomething
-                                        </Button>
+                                </div>
+                            </Container>
+                        </div>
+                        <Container maxWidth="md">
+                            {/* End hero unit */}
+                            <Grid container spacing={4}>
+                                {cards.map(card => (
+                                    <Grid item key={card} xs={12} sm={6} md={4}>
+                                        <Card>
+                                            <CardMedia
+                                                image="https://source.unsplash.com/random"
+                                                title="Image title"
+                                            />
+                                            <CardContent>
+                                                <Typography gutterBottom variant="h5" component="h2">
+                                                    Heading
+                                                </Typography>
+                                                <Typography>
+                                                    This is a media card. You can use this section to describe the content.
+                                                </Typography>
+                                            </CardContent>
+                                            <CardActions>
+                                                <Button size="small" color="secondary">
+                                                    View
+                                                </Button>
+                                                <Button size="small" color="secondary">
+                                                    Edit
+                                                </Button>
+                                            </CardActions>
+                                        </Card>
                                     </Grid>
-                                </Grid>
-                            </div>
+                                ))}
+                            </Grid>
                         </Container>
-                    </div>
-                    <Container maxWidth="md">
-                        {/* End hero unit */}
-                        <Grid container spacing={4}>
-                            {cards.map(card => (
-                                <Grid item key={card} xs={12} sm={6} md={4}>
-                                    <Card>
-                                        <CardMedia
-                                            image="https://source.unsplash.com/random"
-                                            title="Image title"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                Heading
-                                            </Typography>
-                                            <Typography>
-                                                This is a media card. You can use this section to describe the content.
-                                            </Typography>
-                                        </CardContent>
-                                        <CardActions>
-                                            <Button size="small" color="secondary">
-                                                View
-                                            </Button>
-                                            <Button size="small" color="secondary">
-                                                Edit
-                                            </Button>
-                                        </CardActions>
-                                    </Card>
-                                </Grid>
-                            ))}
-                        </Grid>
-                    </Container>
-                </main>
+                    </main>
+                </div>
                 {/* Footer */}
-{/*                <footer className={classes.footer}>
+                <footer className={classes.footer}>
                     <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
                         TarkovGuides.com - Copyright &copy; 2019
                     </Typography>
-                </footer>*/}
+                </footer>
                 {/* End footer */}
             </div>
         );
