@@ -16,6 +16,9 @@
 /src/.cache
 /.idea
 
+# config file
+/config
+
 # misc
 .DS_Store
 .env.local
