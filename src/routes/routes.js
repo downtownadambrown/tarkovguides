@@ -6,9 +6,9 @@
 // ROUTING
 // ===============================================================================
 
-module.exports = function(app) {
-    app.get('/api/guides', function(req, res){
-        console.log("guides route hit");
-        res.send("ok");
-    });
+module.exports = function (app) {
+  app.get('/api/guides', (req, res) => {
+    console.log('guides route hit');
+    res.send('ok');
+  });
 };
