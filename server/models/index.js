@@ -5,12 +5,13 @@ const Sequelize = require('sequelize');
 
 const basename = path.basename(module.filename);
 const env = process.env.NODE_ENV || 'development';
+const useEnvVariable = 'development';
 const config = require('../../config/config.json')[env];
 
 const db = {};
 
-const sequelize = (config.use_env_variable)
-  ? new Sequelize(process.env[config.use_env_variable])
+const sequelize = (config[useEnvVariable])
+  ? new Sequelize(process.env[config[useEnvVariable]])
   : new Sequelize(config.database, config.username, config.password, config);
 
 fs
