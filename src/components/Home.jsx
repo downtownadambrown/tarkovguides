@@ -24,21 +24,21 @@ export default function HomeContent() {
       <div className={classes.hero}>
         <Container maxWidth="sm">
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                        Tarkov Guides
+              Tarkov Guides
           </Typography>
           <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                        If Escaping from Tarkov were easy, we wouldn't exist.
+              If Escaping from Tarkov were easy, we wouldn't exist.
           </Typography>
           <div>
             <Grid container spacing={2} justify="center">
               <Grid item>
                 <Button variant="contained" color="primary">
-                                    Check out New Guides!
+                    Check out New Guides!
                 </Button>
               </Grid>
               <Grid item>
                 <Button variant="outlined" color="secondary">
-                                    SomethingSomething
+                    SomethingSomething
                 </Button>
               </Grid>
             </Grid>
@@ -56,18 +56,18 @@ export default function HomeContent() {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                                        Heading
+                      Heading
                   </Typography>
                   <Typography>
-                                        This is a media card. You can use this section to describe the content.
+                      This is a media card. You can use this section to describe the content.
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <Button size="small" color="secondary">
-                                        View
+                      View
                   </Button>
                   <Button size="small" color="secondary">
-                                        Edit
+                      Edit
                   </Button>
                 </CardActions>
               </Card>

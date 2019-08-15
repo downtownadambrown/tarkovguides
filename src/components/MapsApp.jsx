@@ -57,7 +57,7 @@ export default function MapsApp() {
                     {map}
                   </Typography>
                   <Typography>
-                                        This is a media card. You can use this section to describe the content.
+                      This is a media card. You can use this section to describe the content.
                   </Typography>
                 </CardContent>
                 <CardActions>
@@ -73,8 +73,6 @@ export default function MapsApp() {
           ))}
         </Grid>
       </Container>
-      {' '}
-
     </div>
   );
 }

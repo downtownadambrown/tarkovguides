@@ -18,10 +18,10 @@ export default function ModdingApp() {
       <div className={classes.hero}>
         <Container maxWidth="sm">
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                        Tarkov Weapon Modding
+              Tarkov Weapon Modding
           </Typography>
           <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                        Modding ain't easy!
+              Modding ain't easy!
           </Typography>
         </Container>
       </div>
