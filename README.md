@@ -11,3 +11,5 @@
 - Sequelize / PostgreSQL
 - Lodash
 - a lot of passion
+
+By Adam Brown
