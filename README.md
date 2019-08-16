@@ -2,7 +2,7 @@
 ### The future home of everything you need to know in order to Escape from Tarkov
 
 ### Built with:
-- React built in functional components w/ hooks
+- React using purely functional components w/ hooks
 - Redux, Redux-Sagas
 - React Router
 - Material UI
