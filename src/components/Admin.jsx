@@ -4,10 +4,10 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core';
-import { getUsers } from '../models/Users/actions';
-import { getAmmo } from '../models/Ammo/actions';
-import { getGuns } from '../models/Guns/actions';
 import { connect } from "react-redux";
+import { getTableData } from "../models/Admin/actions";
+import ReactTable from 'react-table';
+import tableColumns from './Admin/tableColumns';
 
 const useStyles = makeStyles((theme) => ({
     hero: {
@@ -28,25 +28,23 @@ const Admin = (props) => {
   const classes = useStyles();
 
   const [view, setView] = useState('Users');
-  const userData = useSelector(state => state.users.get('data'));
-  const gunsData = useSelector(state => state.guns.get('data'));
-  const ammoData = useSelector(state => state.ammo.get('data'));
+  const [data, setData] = useState([]);
+  const [sorted, setSorted] = useState([]);
+  const [columns, setColumns] = useState(tableColumns(view));
+
+  const tableData = useSelector(state => state.admin.get('tableData'));
 
   useEffect( () => {
-      switch(view) {
-        case "Users":
-            dispatch(getUsers());
-            break;
-        case "Ammo":
-            dispatch(getAmmo());
-            break;
-        case "Guns":
-            dispatch(getGuns());
-            break;
-        default:
-            break;
-    }
+      dispatch(getTableData(view));
+      setColumns(tableColumns(view));
   }, [view, dispatch]);
+
+  useEffect(() => {
+      setData(tableData);
+  }, [tableData]);
+
+  console.log("data: ", data);
+  console.log("columns: ", columns);
 
   return (
     <div>
@@ -68,6 +66,16 @@ const Admin = (props) => {
             Guns
         </Button>
       </Container>
+        {data && columns && (
+            <ReactTable
+                columns={columns}
+                data={data}
+/*                sorted={sorted}
+                onSortedChange={sorted => setSorted(sorted)}*/
+                defaultPageSize={10}
+                minRows={10}
+            />
+        )}
     </div>
   );
 };

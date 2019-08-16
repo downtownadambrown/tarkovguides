@@ -7,14 +7,14 @@ module.exports = function (connection, Sequelize) {
         notEmpty: true,
       },
     },
-    ammo_type: {
+    ammoType: {
       type: Sequelize.STRING,
       allowNull: false,
       validate: {
         notEmpty: true,
       },
     },
-    magazine_options: {
+    magazineOptions: {
       type: Sequelize.REAL,
       allowNull: false,
       validate: {
