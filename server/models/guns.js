@@ -1,5 +1,5 @@
 module.exports = function (connection, Sequelize) {
-  const Gun = connection.define('Gun', {
+  const Guns = connection.define('Guns', {
     name: {
       type: Sequelize.STRING,
       allowNull: false,
@@ -30,5 +30,5 @@ module.exports = function (connection, Sequelize) {
     },
   });
 
-  return Gun;
+  return Guns;
 };

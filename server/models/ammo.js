@@ -1,13 +1,5 @@
 module.exports = function (connection, Sequelize) {
-  const Ammo = connection.define('ammo', {
-    id: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
-      primaryKey: true,
-    },
+  const Ammo = connection.define('Ammo', {
     name: {
       type: Sequelize.STRING,
       allowNull: false,
@@ -29,7 +21,7 @@ module.exports = function (connection, Sequelize) {
         notEmpty: true,
       },
     },
-    used_by: {
+    usedBy: {
       type: Sequelize.ARRAY(Sequelize.INTEGER),
       allowNull: true,
       validate: {
@@ -43,62 +35,64 @@ module.exports = function (connection, Sequelize) {
         notEmpty: true,
       },
     },
-    armor_pen: {
+    armorPen: {
       type: Sequelize.INTEGER,
       allowNull: false,
       validate: {
         notEmpty: true,
       },
     },
-    armor_damage: {
+    armorDamage: {
       type: Sequelize.INTEGER,
       allowNull: false,
       validate: {
         notEmpty: true,
       },
     },
-    fragmentation_chance: {
+    fragmentationChance: {
       type: Sequelize.INTEGER,
       allowNull: false,
       validate: {
         notEmpty: true,
       },
     },
-    ricochet_chance: {
+    ricochetChance: {
       type: Sequelize.INTEGER,
       allowNull: false,
       validate: {
         notEmpty: true,
       },
     },
-    projectile_speed: {
+    projectileSpeed: {
       type: Sequelize.INTEGER,
       allowNull: false,
       validate: {
         notEmpty: true,
       },
     },
-    special_effects: {
+    specialEffects: {
       type: Sequelize.ARRAY(Sequelize.INTEGER),
       allowNull: true,
       validate: {
         notEmpty: true,
       },
     },
-    sold_by_vendor: {
+    soldByVendor: {
       type: Sequelize.STRING,
       allowNull: false,
       validate: {
         notEmpty: true,
       },
     },
-    sold_by_vendor_rank: {
+    soldByVendorRank: {
       type: Sequelize.INTEGER,
       allowNull: false,
       validate: {
         notEmpty: true,
       },
     },
+  }, {
+    freezeTableName: true
   });
 
   return Ammo;
