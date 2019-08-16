@@ -1,5 +1,4 @@
 import { Map } from "immutable";
-import _ from "lodash";
 
 import {
     GET_USERS_START,
