@@ -39,7 +39,7 @@ export default withRouter((props) => {
     <AppBar position="relative" className={classes.appBar}>
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-                    Tarkov Guides
+          Tarkov Guides
         </Typography>
         <Button className={classes.appButton}>
           <Link
@@ -49,7 +49,7 @@ export default withRouter((props) => {
             className={classes.appBarLink}
             underline="none"
           >
-                        Home
+            Home
           </Link>
         </Button>
         <Button className={classes.appButton}>
@@ -60,7 +60,7 @@ export default withRouter((props) => {
             className={classes.appBarLink}
             underline="none"
           >
-                        Guides
+            Guides
           </Link>
         </Button>
         <Button className={classes.appButton}>
@@ -71,7 +71,7 @@ export default withRouter((props) => {
             className={classes.appBarLink}
             underline="none"
           >
-                        Maps
+            Maps
           </Link>
         </Button>
         <Button className={classes.appButton}>
@@ -82,7 +82,7 @@ export default withRouter((props) => {
             className={classes.appBarLink}
             underline="none"
           >
-                        Modding
+            Modding
           </Link>
         </Button>
         <Button className={classes.appButton}>
@@ -93,7 +93,7 @@ export default withRouter((props) => {
             className={classes.appBarLink}
             underline="none"
           >
-                        Keys
+            Keys
           </Link>
         </Button>
         <div className={classes.grow} />
@@ -105,7 +105,18 @@ export default withRouter((props) => {
             className={classes.appBarLink}
             underline="none"
           >
-                        Login
+            Login
+          </Link>
+        </Button>
+        <Button color="inherit" className={classes.loginButton}>
+          <Link
+              component={RouterLink}
+              to="/admin"
+              color="inherit"
+              className={classes.appBarLink}
+              underline="none"
+          >
+            Admin
           </Link>
         </Button>
       </Toolbar>
