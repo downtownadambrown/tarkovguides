@@ -10,6 +10,7 @@ import KeysApp from './components/KeysApp';
 import Home from './components/Home';
 import MainAppBar from './components/MainAppBar';
 import Footer from './components/Footer';
+import Admin from './components/Admin';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/modding" component={ModdingApp} />
                 <Route path="/keys" component={KeysApp} />
                 <Route path="/user" component={null} />
+                <Route path="/admin" component={Admin} />
                 <Route component={Home} />
               </Switch>
             </Router>
