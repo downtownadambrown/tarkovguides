@@ -1,5 +1,5 @@
 ## TarkovGuides.com
-### The future home of everything you need to know in order to Escape from Tarkov
+### The future home of everything you need to know in order to Escape from Tarkov (www.escapefromtarkov.com)
 
 ### Built with:
 - React using purely functional components w/ hooks
